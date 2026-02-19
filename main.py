@@ -3,8 +3,7 @@ from kivy.uix.label import Label
 
 class BossGuardApp(App):
     def build(self):
-        # আপাতত শুধু ইংরেজি দিয়ে টেস্ট করুন যাতে লাল বাতি না জ্বলে
-        return Label(text='Hello Boss Mehrab, Success!')
+        return Label(text='Boss Mehrab, Success is Near!')
 
 if __name__ == '__main__':
     BossGuardApp().run()
