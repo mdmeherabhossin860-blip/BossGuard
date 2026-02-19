@@ -1,5 +1,7 @@
-name: APK-Build
-on: [push]
+name: Final-Build
+on:
+  push:
+    branches: [ "main" ]
 jobs:
   build:
     runs-on: ubuntu-latest
