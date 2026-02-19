@@ -2,11 +2,11 @@ name: Build-Android-APK
 on: [push, workflow_dispatch]
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v4
         with:
           python-version: '3.9'
       - name: Install dependencies
@@ -15,6 +15,8 @@ jobs:
           pip install buildozer cython==0.29.33 virtualenv
       - name: Build with Buildozer
         run: |
+          # অ্যান্ড্রয়েড লাইসেন্স এবং এনডিকে ফিক্স
+          mkdir -p ~/.android && touch ~/.android/repositories.cfg
           yes | buildozer android debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
