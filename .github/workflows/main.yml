@@ -1,9 +1,16 @@
-name: Mobile-Build
-on: [push]
+name: Build-Android-APK
+on: [push, workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Build
-        run: echo "Magic is starting now!"
+      - name: Build APK with Buildozer
+        uses: ArtemSerebriakov/buildozer-action@v1
+        with:
+          command: buildozer android debug
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-app-apk
+          path: bin/*.apk
