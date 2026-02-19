@@ -1,5 +1,5 @@
 [app]
-title = Boss Guard
+title = BossGuard
 package.name = bossguard
 package.domain = org.mehrab
 source.dir = .
