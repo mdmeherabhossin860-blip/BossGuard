@@ -3,7 +3,7 @@ from kivy.uix.label import Label
 
 class BossGuardApp(App):
     def build(self):
-        return Label(text='Boss Mehrab, Success is Coming!')
+        return Label(text='Boss Mehrab, Your App is Success!')
 
 if __name__ == '__main__':
     BossGuardApp().run()
