@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Build with Buildozer
-        uses: ArtemSerebriakov/buildozer-action@v1
+        uses: Enteee/buildozer-action@v1.1.2
         with:
           command: buildozer android debug
       - name: Upload APK
