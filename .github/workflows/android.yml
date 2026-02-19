@@ -1,18 +1,26 @@
 name: Build Android APK
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "main" ]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Build with Buildozer
-        uses: ArtemSerebriakov/buildozer-action@v1
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
-          command: buildozer android debug
-          buildozer_version: master
+          python-version: '3.9'
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y build-essential libffi-dev python3-dev
+          pip install buildozer kivy
+      - name: Build APK
+        run: buildozer android debug
       - name: Upload APK
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: BossGuard-App
           path: bin/*.apk
