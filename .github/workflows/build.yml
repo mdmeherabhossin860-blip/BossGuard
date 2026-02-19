@@ -12,10 +12,10 @@ jobs:
       - name: Install dependencies
         run: |
           pip install buildozer cython==0.29.33 virtualenv
-      - name: Fix Spec and Build
+      - name: Build with Buildozer
         run: |
-          # যদি ফাইলে ভুল থাকে তবে এটি নিজ থেকে ঠিক করবে
-          buildozer init || true
+          # সব লাইসেন্স অটো-একসেপ্ট করার কমান্ড
+          mkdir -p ~/.android && touch ~/.android/repositories.cfg
           yes | buildozer android debug
       - name: Upload APK
         uses: actions/upload-artifact@v4
