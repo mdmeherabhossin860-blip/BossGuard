@@ -5,12 +5,13 @@ package.domain = org.mehrab
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
-requirements = python3,kivy
+requirements = python3,kivy==2.2.1,pillow
 orientation = portrait
 fullscreen = 0
 android.archs = armeabi-v7a
-android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
+android.permissions = INTERNET
 android.accept_sdk_license = True
-android.api = 33
+android.api = 31
 android.minapi = 21
 android.ndk_api = 21
+p4a.branch = master
