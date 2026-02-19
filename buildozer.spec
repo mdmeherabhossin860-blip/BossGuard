@@ -12,3 +12,5 @@ android.archs = armeabi-v7a
 android.permissions = INTERNET, WRITE_EXTERNAL_STORAGE, READ_EXTERNAL_STORAGE
 android.allow_backup = True
 android.accept_sdk_license = True
+android.api = 33
+android.minapi = 21
