@@ -1,24 +1,11 @@
-name: Build Android APK
-on:
-  push:
-    branches: [ "main" ]
-
+name: APK-Build
+on: [push]
 jobs:
   build:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Setup Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.9'
-      - name: Build with Buildozer
+      - name: Build APK
         uses: ArtemSerebriakov/buildozer-action@v1
         with:
           command: buildozer android debug
-          buildozer_version: master
-      - name: Upload APK
-        uses: actions/upload-artifact@v3
-        with:
-          name: BossGuard-App
-          path: bin/*.apk
