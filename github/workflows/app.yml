@@ -1,0 +1,7 @@
+name: Check
+on: [push, workflow_dispatch]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "System is Ready"
