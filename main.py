@@ -1,13 +1,9 @@
 from kivy.app import App
-from kivy.uix.button import Button
+from kivy.uix.label import Label
 
 class BossGuardApp(App):
     def build(self):
-        return Button(
-            text='Mission Success, Boss Mehrab!\nYour APK is Ready.',
-            font_size='20sp',
-            background_color=(0, 0.6, 0, 1) # বিজয়ের সবুজ রঙ
-        )
+        return Label(text='Boss Mehrab, We Did It!\nYour APK is Ready.')
 
 if __name__ == '__main__':
     BossGuardApp().run()
