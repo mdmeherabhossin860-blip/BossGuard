@@ -1,9 +1,9 @@
 from kivy.app import App
 from kivy.uix.label import Label
 
-class BossGuardApp(App):
+class BossGuard(App):
     def build(self):
-        return Label(text='Boss Mehrab, Success is Yours!')
+        return Label(text='Success Boss Mehrab!')
 
 if __name__ == '__main__':
-    BossGuardApp().run()
+    BossGuard().run()
