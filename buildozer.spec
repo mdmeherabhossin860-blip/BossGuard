@@ -12,19 +12,19 @@ requirements = python3,kivy==2.2.1
 orientation = portrait
 fullscreen = 0
 
-# এখানে আপনার চাওয়া INTERNET পারমিশন যোগ করা হয়েছে
+# আপনার রিকোয়েস্ট অনুযায়ী ইন্টারনেট পারমিশন যোগ করা হলো
 android.permissions = INTERNET
 
-# আধুনিক ফোনের জন্য সঠিক আর্কিটেকচার
+# আপনার ফোনের জন্য সঠিক আর্কিটেকচার
 android.archs = arm64-v8a, armeabi-v7a
 android.allow_backup = True
 
-# আপনার Poco ফোনের জন্য স্থিতিশীল এপিআই লেভেল
+# আপনার স্ক্রিনশটের বর্তমান স্থিতিশীল এপিআই সেটিংস
 android.api = 31
 android.minapi = 21
 android.ndk_api = 21
 
-# গিটহাব সাফল্যের সবচেয়ে বড় চাবিকাঠি
+# ১০ মিনিটের জট খোলার প্রধান চাবিকাঠি
 p4a.branch = master
 android.entrypoint = main.py
 
