@@ -12,7 +12,7 @@ requirements = python3,kivy==2.2.1
 orientation = portrait
 fullscreen = 0
 
-# এখানে আমি আপনার জন্য ইন্টারনেট পারমিশন যোগ করে দিয়েছি
+# এখানে আপনার চাওয়া INTERNET পারমিশন যোগ করা হয়েছে
 android.permissions = INTERNET
 
 # আধুনিক ফোনের জন্য সঠিক আর্কিটেকচার
