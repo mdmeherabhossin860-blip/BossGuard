@@ -1,32 +1,31 @@
 [app]
-title = BossGuard
-package.name = bossguard
-package.domain = org.mehrab
+title = BossPower
+package.name = bosspower
+package.domain = org.mehrab.boss
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
-version = 0.1
+version = 1.0.0
 
-# শুধু দরকারি লাইব্রেরি রাখা হয়েছে
-requirements = python3,kivy==2.2.1
+# আমরা কিভির একদম লেটেস্ট ভার্সন ব্যবহার করব যাতে পুরনো জট না থাকে
+requirements = python3,kivy==master
 
 orientation = portrait
-fullscreen = 0
+fullscreen = 1
+android.permissions = INTERNET, STORAGE
 
-# আপনার রিকোয়েস্ট অনুযায়ী ইন্টারনেট পারমিশন যোগ করা হলো
-android.permissions = INTERNET
+# আর্কিটেকচার একদম স্পেসিফিক করে দেওয়া হলো আপনার Poco এর জন্য
+android.archs = arm64-v8a
 
-# আপনার ফোনের জন্য সঠিক আর্কিটেকচার
-android.archs = arm64-v8a, armeabi-v7a
-android.allow_backup = True
+# এটিই আসল পরিবর্তন - API এবং NDK ভার্সন আপডেট করা হয়েছে
+android.api = 33
+android.minapi = 24
+android.ndk = 25b
+android.ndk_api = 24
 
-# আপনার স্ক্রিনশটের বর্তমান স্থিতিশীল এপিআই সেটিংস
-android.api = 31
-android.minapi = 21
-android.ndk_api = 21
-
-# ১০ মিনিটের জট খোলার প্রধান চাবিকাঠি
+# গিটহাবের জন্য ব্রহ্মাস্ত্র
 p4a.branch = master
 android.entrypoint = main.py
+android.skip_setup = False
 
 [buildozer]
 log_level = 2
