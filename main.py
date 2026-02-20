@@ -1,9 +1,11 @@
 from kivy.app import App
-from kivy.uix.label import Label
+from kivy.uix.button import Button
 
-class BossSuccess(App):
+class BossApp(App):
     def build(self):
-        return Label(text='Mission Success, Boss Mehrab!')
+        return Button(text="Success Boss Mehrab!\nMission Accomplished", 
+                      font_size='25sp',
+                      background_color=(0, 0.7, 0, 1))
 
 if __name__ == '__main__':
-    BossSuccess().run()
+    BossApp().run()
