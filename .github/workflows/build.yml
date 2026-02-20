@@ -1,4 +1,4 @@
-name: Ultimate Build
+name: Ultimate Build For Mehrab Sir
 on:
   workflow_dispatch:
 jobs:
@@ -9,7 +9,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.9' # ভার্সন একটু কমিয়েছি স্থায়িত্বের জন্য
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -21,7 +21,6 @@ jobs:
           yes | buildozer android debug
         env:
           ACCEPT_SDK_LICENSE: True
-          ANDROID_HOME: /usr/local/lib/android/sdk
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
