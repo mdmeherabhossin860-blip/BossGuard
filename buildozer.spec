@@ -1,30 +1,31 @@
 [app]
-title = BossSuccess
-package.name = bosssuccess
-package.domain = org.mehrab
+title = BossPower
+package.name = bosspower
+package.domain = org.mehrab.boss
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
 version = 0.1
 
-# রিকোয়ারমেন্টস একদম ক্লিন রাখা হয়েছে
-requirements = python3,kivy==2.2.1
+# requirements একদম ফিক্সড করে দেওয়া হলো
+requirements = python3,kivy==2.2.1,hostpython3==3.10.12
 
 orientation = portrait
 fullscreen = 0
 android.permissions = INTERNET
 
-# আপনার Poco ফোনের জন্য সঠিক আর্কিটেকচার
+# আপনার Poco ফোনের জন্য সঠিক এবং শক্তিশালী আর্কিটেকচার
 android.archs = arm64-v8a
 
-# এই সেটিংসটি এবার ৪ মিনিটের জট ভাঙবে
+# এনডিকে ২৫বি এর সাথে এপিআই ৩৩ এর মেলবন্ধন (সবচেয়ে স্টেবল)
 android.api = 33
 android.minapi = 21
 android.ndk = 25b
 android.ndk_api = 21
 
-# গিটহাব সাফল্যের আসল চাবিকাঠি
+# এই লাইনটি আপনার ৬ মিনিটের বাধা ভাঙবে
 p4a.branch = master
 android.entrypoint = main.py
+android.skip_setup = False
 
 [buildozer]
 log_level = 2
