@@ -1,11 +1,13 @@
 from kivy.app import App
 from kivy.uix.button import Button
 
-class BossApp(App):
+class BossGuardApp(App):
     def build(self):
-        return Button(text="Success Boss Mehrab!\nMission Accomplished", 
-                      font_size='25sp',
-                      background_color=(0, 0.7, 0, 1))
+        return Button(
+            text='Mission Success, Boss Mehrab!\nYour APK is Ready.',
+            font_size='20sp',
+            background_color=(0, 0.6, 0, 1) # বিজয়ের সবুজ রঙ
+        )
 
 if __name__ == '__main__':
-    BossApp().run()
+    BossGuardApp().run()
