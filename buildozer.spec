@@ -1,31 +1,28 @@
 [app]
-title = BossPower
-package.name = bosspower
+title = BossSuccess
+package.name = bosssuccess
 package.domain = org.mehrab.boss
 source.dir = .
 source.include_exts = py,png,jpg,kv,atlas
-version = 1.0.0
-
-# আমরা কিভির একদম লেটেস্ট ভার্সন ব্যবহার করব যাতে পুরনো জট না থাকে
-requirements = python3,kivy==master
+version = 0.1
+requirements = python3,kivy==2.2.1
 
 orientation = portrait
-fullscreen = 1
-android.permissions = INTERNET, STORAGE
+fullscreen = 0
+android.permissions = INTERNET
 
-# আর্কিটেকচার একদম স্পেসিফিক করে দেওয়া হলো আপনার Poco এর জন্য
+# আপনার ফোনের জন্য সঠিক আর্কিটেকচার
 android.archs = arm64-v8a
 
-# এটিই আসল পরিবর্তন - API এবং NDK ভার্সন আপডেট করা হয়েছে
-android.api = 33
-android.minapi = 24
+# এখানে পরিবর্তন করা হয়েছে ৪ মিনিটের জট কাটাতে
+android.api = 31
+android.minapi = 21
 android.ndk = 25b
-android.ndk_api = 24
+android.ndk_api = 21
 
-# গিটহাবের জন্য ব্রহ্মাস্ত্র
+# বিজয়ের চাবিকাঠি
 p4a.branch = master
 android.entrypoint = main.py
-android.skip_setup = False
 
 [buildozer]
 log_level = 2
